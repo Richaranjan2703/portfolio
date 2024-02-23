@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Sushain Gupta" />
+    <meta property="og:image" content="./assets/project.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <title>Richa's Portfolio</title>
+    <link rel="canonical" href="" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/loader.css" />
+    <!-- CDN's -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="./scripts/firebaseInit.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!--Loader-->
+    <div class="loaderDiv">
+      <div class="loader"></div>
+      <p>Loading page</p>
+    </div>
+    <!--Toaster-->
+    <div class="toaster"></div>
+    <!--Div for background-->
+    <div class="bg-div">
+      <img alt="bg-div" src="./assets/bg-proj.png" />
+      
+    </div>
+    <!-----------------------
+         HEADER
+         ------------------------->
+    <header class="header" id="header">
+      <div class="logo img">
+        <img
+          class=""
+          src="portfolio pic.png"
+          alt="logo"
+        />
+      
+      </div>
+      <p class="logo initials" tabindex="1" href=""></p>
+      <div class="navbar">
+        <ul class="navbar-list">
+          <li>
+            <a
+              class="navbar-link active"
+              name="home"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="4"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="about"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="5"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="skills"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="6"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="projects"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="7"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="education"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="8"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              class="navbar-link"
+              name="experience"
+              onclick="scrollToSection(this),toggleNav()"
+              tabindex="9"
+              >Experience</a
+            >
+          </li>
+        </ul>
+        <!-- yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+      yyyyyyyyyyyyyyyyyyyyyy   
+                                              -->
+        <!--a class="contactBtn button" name="getInTouch" tabindex="10" href="#" onclick="toggleForm()" >Contact</a>   
+        <div class="formDiv" id="contactForm">
+          <img alt="contact illustration" src="./assets/contact.png" />
+          <form id="myform">
+            <div class="user-box">
+              <input type="text" id="name" required /><label for="Name">Your Name</label>
+            </div>
+            <div class="user-box">
+              <input type="email" id="email" required /><label for="Email"
+                >Email Address</label
+              >
+            </div>
+            <div class="user-box">
+              <textarea id="message" required></textarea
+              ><label for="Message">Enter your message</label>
+            </div>
+            <button type="submit" class="submit-btn button">Submit</button>
+          </form>
+          <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div><!--class formdiv id ContactForm-->
+        <a
+          class="contactBtn button"       
+          name="getInTouch"
+          tabindex="10"
+          href="https://www.gmail.com"
+          target="_blank"
+          >Contact</a
+        >
+        <ion-icon
+          tabindex="9"
+          name="close-outline"
+          class="mobile-nav-icon"
+          onclick="toggleNav()"
+        ></ion-icon>
+      </div> <!--close div of class navbar-->
+      <ion-icon
+        tabindex="3"
+        name="menu-outline"
+        class="mobile-nav-icon"
+        onclick="toggleNav()"
+      ></ion-icon>
+    
+    </header>
+    <!-----------------------
+         HOME SECTION
+         ------------------------->
+    <section class="section home-section" id="home" tabindex="42">
+      <div>
+        <h2>Hey, It's Me! </h2><h1><span class="name">Richa</span></h1>
+        <h3>Programmer Data Analyst</h3>
+        <p class="aboutShort">
+          Expertise in Data-Driven Technologies for Business Excellence.
+           <br> Actively working in the field of ETL developments..
+        </p>
+        <button
+          class="about-me-btn button"
+          name="about"
+          onclick="scrollToSection(this)"
+          tabindex="2"
+        >
+          About Me
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="">
+        <div class="imgDiv"
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true">
+          <img src="mine.jpeg" class="profile-image" 
+        
+          />
+        </div>
+      </div>
+    </section>
+    <!-----------------------
+         ABOUT SECTION
+         ------------------------->
+    <section id="about" class="section about-section" tabindex="11">
+      <div class="about-ill"><img src="about me - no background.png" alt="Memoji" /></div>
+      <div
+        class="aboutMe"
+        data-aos="fade-left"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h2 class="name">Richa Ranjan </h2>
+        <div class="professionContainer">
+          <p class="profession">Programmer Data Analyst</p>
+          <!--<p class="profession">profession 2</p>-->
+        </div>
+        <br />
+        <p class="aboutLong">
+          A dedicated and Focused Programmer Analyst with exceptional problem solving and technical skills.
+          Actively working towards expanding my knowledge as an Azure Data Engineer and working in the field of <></B>ETL developments</strong>.
+          <br>
+          <br>
+          I'm on the lookout for an amazing and dynamic team and company where I can learn, grow, and make a real impact. 
+          Excited to bring my skills to the table, contribute fresh ideas, and be part of a vibrant work environment that values Hardwork, inovation and TeamWork.
+
+        </p>
+        <br />
+        <a
+          class="button"
+          href="Richa Ranjan CV 2024.pdf" download="Richa_Ranjan_cv.pdf"
+            <button>Download Resume</button>
+        </a>
+          <!--target="_blank"
+          tabindex="12"
+        >
+      -->
+        
+          <!--Resume-->
+          <!--<ion-icon name="document-outline"></ion-icon>-->
+        </a>
+      </div>
+      <ul
+        class="social-menu"
+        data-aos="fade-left"
+        data-aos-duration="700"
+        data-aos-delay="500"
+        data-aos-once="true"
+      >
+        <li id="linkedin">
+          <a
+            href="https://www.linkedin.com/in/richa-ranjan-b794191b2/"
+            aria-label="linkedin"
+            class="linkedin"
+            tabindex="13"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </li>
+        <li id="github">
+          <a
+            href="https://github.com/Richaranjan2703"
+            aria-label="github"
+            class="github"
+            tabindex="14"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li id="instagram">
+          <a
+            href="https://www.instagram.com/kya_richaaaaaaa?igsh=d3YyeDBoOGw3ZWhz"
+            aria-label="instagram"
+            class="instagram"
+            tabindex="15"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li id="twitter">
+          <a
+            href="https://www.twitter.com"
+            aria-label="twitter"
+            class="twitter"
+            tabindex="16"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+      </ul>
+    </section>
+    <!-----------------------
+         SKILLS SECTION
+         ------------------------->
+    <section class="section skill-section" id="skills" tabindex="17">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h1 class="title">
+          My Skills
+          <p>Tiles in <span>blue</span> are some of my major skills.</p>
+        </h1>
+        <div class="skill-container">
+          <div class="major">
+            <img src="./assets/skill.png" alt="Skill image 1" />
+            <p>Power BI Desktop </p>
+          </div>
+          <div class="major">
+            <img src="./assets/skill.png" alt="Skill image 1" />
+            <p>SSMS, MySql</p>
+          </div>
+          <div class="major">
+            <img src="./assets/skill.png" alt="Skill image 2" />
+            <p>Python</p>
+          </div>
+          <div class="majorr">
+            <img src="./assets/skill.png" alt="Skill image 2" />
+            <p>Excel,SDLC</p>
+          </div>
+          
+          <div class="minor">
+            <img src="./assets/skill.png" alt="Skill image 3" />
+            <p>Shell Scripting</p>
+          </div>
+          <div class="minor">
+            <img src="./assets/skill.png" alt="Skill image 3" />
+            <p>HTML, CSS, JS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------
+         PROJECT SECTION
+         ------------------------->
+    <section class="project-section" id="projects" tabindex="18">
+      <div 
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <div class="section-header">
+          <h1 class="title">
+            My recent work
+            <p class="sectionDesc">
+              Here are a few past projects I've worked on. Want to know in more Details?<a
+                href="https://www.gmail.com"
+                tabindex="22"
+              >
+                Email me </a
+              >
+            </p>
+          </h1>
+          <img
+            class="ProjectHeaderImage"
+            src="./assets/project-head.png"
+            alt="Project header image"
+          />
+        </div>
+          
+        <div class="project card-container">
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="mdm logo.png" alt="Project image" />
+            </div>
+            
+            <h6>Project Title: MDM Support</h6>
+            
+            <div class="options">
+              <a
+                class="viewElem"
+                href="https://sushaingupta.netlify.app"
+                target="_blank"
+              >
+                <ion-icon name="open-outline"></ion-icon>
+              </a>
+              <a class="githubElem" href="https://github.com" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>
+            </div>
+          </div>
+
+
+
+          <div class="project card 1" tabindex="">
+            
+            <div class="imgDiv">
+              <img src="cdi logo.png" alt="Project image" />
+            </div>
+            <h6>Project Title: Client Hierarchy Data Integration</h6>
+            <div class="layer_new"><p>
+                data-details="Details about the project go here.">Project Details:Aligned and clubbed all the party data available in the warehouse/ database of client company which is used in CDI to
+                flow to other source systems or standardizing zone.
+              </p>
+                </div>
+                
+          </div>
+
+
+
+
+          <div class="project card 1" tabindex="">
+            <div class="imgDiv">
+              <img src="ssis logo.png" alt="Project image" />
+            </div>
+            <br />
+            <h6>Project Title:Training Mini Proj on SSIS</h6>
+            <!--
+            <p class="techstack">
+              <span> Techstack </span> - Techstack 1, Techstack 2
+            </p>
+            <p class="library">
+              <span> Libraries </span> - Library 1, Library 2
+            </p>
+            <div class="options">
+              <a
+                class="viewElem"
+                href="https://sushaingupta.netlify.app"
+                target="_blank"
+              >
+                <ion-icon name="open-outline"></ion-icon>
+              </a>
+              <a class="githubElem" href="https://github.com" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+              <button class="share">
+                <ion-icon name="link-outline">Copied text!</ion-icon>
+              </button>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------------------
+         EDUCATION SECTIONS
+         ------------------------->
+    <section class="section education-section" id="education" tabindex="23">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h1 class="title">
+          Education
+          <p>These are some of my past qualifications.</p>
+        </h1>
+        <div class="card-container">
+          <div class="card">
+            <div class="imgDiv">
+              <img src="./assets/edu.png" alt="Institute image" />
+            </div>
+            <br />
+            <h6 class="courseName">Bachelor of Engineering <br> (B.E)</h6>
+            <p class="instituteName">Bangalore Institute of Technology,Bangalore</p>
+            <p class="instituteDesc">Electronics and Communications, (ECE)</p>
+            <br />
+            <p class="status Completed">Completed in  Year 2021</p>  <!-- write status persuing for red color-->
+          </div>
+          <div class="card">
+            <div class="imgDiv">
+              <img src="./assets/edu.png" alt="Institute image" />
+            </div>
+            <br />
+            <h6 class="courseName">Higher secondry Certification (HSC)</h6>
+            <p class="instituteName">Delhi public school, Bilaspur (C.G.)</p>
+            <p class="instituteDesc">Grades obtained: 86.23% </p>
+            <br />
+            <p class="status Completed">Completed in year 2016</p>
+          </div>
+          <div class="card">
+            <div class="imgDiv">
+              <img src="./assets/edu.png" alt="Institute image" />
+            </div>
+            <br />
+            <h6 class="courseName">Secondary School Certificate (SSC) </h6>
+            <p class="instituteName">Delhi public school, Bilaspur (C.G.)</p>
+            <p class="instituteDesc">Grades obtained: 9.4 CGPA</p>
+            <br />
+            <p class="status Completed">Completed in year 2014</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-----------------------
+         Certification SECTIONS
+         ------------------------->
+         <section class="section certification-section" id="certification" tabindex="23">
+          <div
+            style="
+              width: 100%;
+              align-items: center;
+              display: flex;
+              flex-direction: column;
+            "
+            data-aos="zoom-in-up"
+            data-aos-duration="700"
+            data-aos-once="true"
+          >
+            <h1 class="title">
+              Certifications
+              <p>These are some of my Accomplished Certifications.</p>
+            </h1>
+            <div class="card-container">
+              <div class="card">
+                <div class="imgDiv">
+                  <img src="certification symbol.jpg" alt="Institute image" />
+                </div>
+                <br />
+                <h6 class="courseName">Azure Fundamentals (AZ900)</h6>
+                <p class="instituteName">Microsoft Certified</p>
+                
+                <br />
+                <p class="status Completed">Completed in  Year 2022</p>  <!-- write status persuing for red color-->
+              </div>
+              <div class="card">
+                <div class="imgDiv">
+                  <img src="certification symbol.jpg" alt="Institute image" />
+                </div>
+                <br />
+                <h6 class="courseName">Azure Data Fundamentals (DP900)</h6>
+                <p class="instituteName">Microsoft Certified</p>
+                
+                <br />
+                <p class="status Completed">Completed in  Year 2023</p>  <!-- write status persuing for red color-->
+              </div>
+            
+              <div class="card">
+                <div class="imgDiv">
+                  <img src="certification symbol.jpg" alt="Institute image" />
+                </div>
+                <br />
+                <h6 class="courseName"> Python Basics Bootcamp</h6>
+                <p class="instituteName">Udemy Certified</p>
+                <br />
+                <p class="status Completed">Completed in year 2023</p>
+              </div>
+              <div class="card">
+                <div class="imgDiv">
+                  <img src="certification symbol.jpg" alt="Institute image" />
+                </div>
+                <br />
+                <h6 class="courseName"> Microsoft Excel (Adv.)</h6>
+                <p class="instituteName">Udemy Certified</p>
+                
+                <br />
+                <p class="status Completed">Completed in year 2023</p>
+              </div>
+            </div>
+          </div>
+        </section>
+    <!-------------------------
+         EXPERIENCE SECTION
+         ------------------------->
+    <section class="section experience-section" id="experience" tabindex="24">
+      <div
+        style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <h1 class="title">
+          Experience
+          <p>This is the company, I am currently woring with.</p>
+          
+        </h1>
+        
+        <div class="expContainer">
+          
+          <ul class="listOfExp">
+            <li class="companyName active" tabindex="${tabindex}">
+              <h1>Cognizant</h1>
+            </li>
+          </ul>
+          <div class="expDesc">
+            <h4 class="expTitle">Programmer Data Analyst</h4>
+            <p class="period">From Oct 2021 - to Current </p>
+            <br />
+            <p class="desc">
+              I have joined Cognizant from campus selection.
+              Being a service based company, Cognizant mordernises the services which helps in achieving agility for an increasing digital world. 
+              Being part of Data, analytics and AI team, I have contributed towards integrating the enterprise and accelerate value through advanced data management stratergies and solutions.
+            </p>
+          </div>
+        
+      </div>
+      </div>
+      
+    </section>
+    <!-----------------------
+         CONTACT FORM
+         ------------------------->
+         <!--
+    <div class="formDiv">
+      <img alt="contact illustration" src="./assets/contact.png" />
+      <form id="myform">
+        <div class="user-box">
+          <input type="text" id="name" required /><label for="Name"
+            >Your Name</label
+          >
+        </div>
+        <div class="user-box">
+          <input type="email" id="email" required /><label for="Email"
+            >Email Address</label
+          >
+        </div>
+        <div class="user-box">
+          <textarea id="message" required></textarea
+          ><label for="Message">Enter your message</label>
+        </div>
+        <button type="submit" class="submit-btn button">Submit</button>
+      </form>
+      <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+    </div>-->
+
+    <!-----------------------
+         TRY AND ERROR SECTION
+         
+
+         <section>
+          <div 
+          style="
+          width: 100%;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+        "
+        data-aos="zoom-in-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+        
+        id="portfolio" id="project">
+          
+          <div class="main-text" id="project">
+          
+          <h2>Latest<span>Project</span></h2>
+          
+          <div class="portfolio-content">
+            
+          <div class="row">
+            <img src="mdm logo.png">
+            <div class="layer">
+              <h5>UI/UX Design</h5>
+              <p>1khgfyghuuhijoklklklklkkljj</p>
+              <!--<a href="#"><i class='bx bx-link-external' style="color: aliceblue;"</i></a>
+            </div>
+          </div> 
+
+          <div class="row">
+            <img src="cdi logo.png">
+            <div class="layer">
+              <h5>UI/UX Design</h5>
+              <p>1khgfyghuuhijoklklklklkkljj</p>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>------------------------->
+          
+
+
+
+
+
+
+
+
+
+
+    <!-----------------------
+         FOOTER SECTION
+         ------------------------->
+    <footer class="footer" tabindex="35">
+      <div class="getInTouch">
+        <h3>Thankyou! For Your Time</h3>
+        <p>
+          Liked the profile?. We should queue up a time to chat.
+        </p>
+        <a
+          class="getInTouchBtn button"
+          target="_blank"
+          href="https://www.gmail.com"
+          tabindex="36"
+          >Get in touch</a
+        >
+      </div>
+      <div class="footerParent">
+        <div class="profInfo">
+          <div class="imgDiv">
+            <img src="mine-croped.jpeg" alt="Profile Image" />
+          </div>
+          <p>
+            Richa Ranjan <br />Mail me at
+            <a href="https://www.gmail.com" tabindex="37">richa.ranjan2703@gmail.com</a>
+          </p>
+        </div>
+        <div class="reachMeOut">
+          <h3>Reach me out on</h3>
+          <ul class="social-menu">
+            <li id="linkedin">
+              <a
+                href="https://www.linkedin.com/in/richa-ranjan-b794191b2/"
+                class="linkedin"
+                tabindex="38"
+                aria-label="linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li id="github">
+              <a
+                href="https://github.com/Richaranjan2703"
+                aria-label="github"
+                class="github"
+                tabindex="39"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li id="instagram">
+              <a
+                href="https://www.instagram.com/kya_richaaaaaaa?igsh=d3YyeDBoOGw3ZWhz"
+                aria-label="instagram"
+                class="instagram"
+                tabindex="40"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li id="twitter">
+              <a
+                href="https://twitter.com"
+                aria-label="twitter"
+                class="twitter"
+                tabindex="41"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="developerInfo">
+        Portfolio developed by Me!
+        <a href="https://www.linkedin.com/in/richa-ranjan-b794191b2/" tabindex="50"
+          >Richa Ranjan</a
+        >
+      </p>
+    </footer>
+    <!-- Scripts-->
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/commonScript.js"></script>
+    <script src="./scripts/script.js
+    "></script>
+    <!-- External scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
